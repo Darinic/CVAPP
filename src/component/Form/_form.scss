@@ -1,0 +1,150 @@
+.contactMe {
+    &__form {
+        padding: 2rem;
+        display: flex;
+        border-radius: 1rem;
+        flex-direction: column;
+        width: 80rem;
+        margin: auto;
+        background-image: linear-gradient(to right bottom, rgba(#2e355f, .85), rgba(#405365, .85));
+        box-shadow: 0 2rem 4rem rgba($color-black, 0.6);
+
+        @include respond(big-tablet) {
+            width: 70rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @include respond(mid-tablet) {
+            width: 50rem;
+        }
+
+        @include respond(small-tablet) {
+            width: 40rem;
+            padding: 1rem 2rem;
+        }
+
+        @include respond(phone) {
+            width: 30rem;
+        }
+
+        &--label {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: $color-white;
+            margin-right: 1rem;
+        }
+
+        &--input {
+            width: 30rem;
+            height: 4rem;
+            border: none;
+            border-radius: 2rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            font-size: 1.5rem;
+            resize: none;
+            font-weight: bold;
+            color: $color-white;
+            background-color: rgba($color-white, .2);
+            transition: all 0.5s;
+            &:focus {
+                background-color: rgba($color-white, .4);
+            }
+            &::placeholder {
+                color: $color-white;
+            }
+
+            @include respond(big-tablet) {
+                width: 25rem;
+            }
+        }
+
+        &--textarea {
+            width: 75rem;
+            height: 10rem;
+            border: none;
+            border-radius: 2rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $color-white;
+            background-color: rgba($color-white, .2);
+            transition: all 0.5s;
+            &:focus {
+                background-color: rgba($color-white, .4);
+            }
+            &::placeholder {
+                color: $color-white;
+            }
+
+            @include respond(big-tablet) {
+                width: 65rem;
+            }
+
+            @include respond(mid-tablet) {
+                width: 44rem;
+            }
+            
+            @include respond(small-tablet) {
+                width: 35rem;
+            }
+
+            @include respond(phone) {
+                width: 27rem;
+            }
+        }
+
+        &--button {
+            width: 20rem;
+            height: 4rem;
+            border: none;
+            border-radius: 2rem;
+            margin-bottom: 1rem;
+
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $color-white;
+            background-color: rgba($color-white, .2);
+            transition: all 0.5s;
+            &:hover {
+                background-color: rgba($color-white, .4);
+            }
+
+            @include respond(small-tablet) {
+                width: 10rem;
+                height: 4rem;
+            }
+        }
+    }
+    &__ButtonAndAlertBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    &__NameAndEmailBox {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        @include respond(big-tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__Alert {
+        font-size: 2rem;
+        width: 30rem;
+        color: $color-neongreen;
+        animation: moveInLeft 2s ease-out;
+
+        @include respond(small-tablet) {
+            width: 10rem;
+            word-wrap: break-word;
+            font-size: 1.4rem;
+        }
+    }
+}

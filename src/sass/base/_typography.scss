@@ -1,0 +1,73 @@
+.heading {
+
+    &__primary {
+        color: inherit;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: inherit;
+        font-size: 4rem;
+        letter-spacing: 1rem;
+
+        @include respond(big-tablet) {
+            font-size: 3rem;
+        }
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+            letter-spacing: 0;
+        }
+    }
+
+    &__secondary {
+        color: $color-white;
+        font-family: inherit;
+        font-size: 2.5rem;
+        font-weight: bold;
+
+        @include respond(mid-tablet) {
+            margin-top: 2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }
+
+    }
+
+    &__third {
+        color: $color-white;
+        font-family: inherit;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    &__fourth {
+        color: $color-white;
+        font-family: inherit;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        @include respond (mid-tablet) {
+            font-size: 1.1rem;
+        }
+
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+
+    &__fifth {
+        color: inherit;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: inherit;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: .5rem;
+
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+}

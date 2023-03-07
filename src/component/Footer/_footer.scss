@@ -1,0 +1,41 @@
+.footer {
+
+    &__animation {
+    background-image: url('../assets/img/CroppedRickAndMorty.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+
+    @include respond(big-tablet) {
+        height: 50vh;
+    }
+}
+}
+
+.leftEye, .rightEye {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    animation: eye 2s infinite;
+    top: 35%;
+    transform: translateY(-50%);
+
+    @include respond(small-desktop) {
+        top: 32%;
+    }
+    @include respond(big-tablet) {
+        display: none;
+    }
+}
+
+.leftEye {
+    right: 43%
+}
+
+.rightEye {
+    right:37%;
+}

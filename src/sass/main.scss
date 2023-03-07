@@ -1,0 +1,17 @@
+@import 'Abstracts/variables';
+@import 'Abstracts/mixins';
+@import 'Base/base';
+@import 'Base/typography';
+@import 'Base/animations';
+
+@import '../component/Introduction/introduction';
+@import '../component/WrappedComponent/wrappedComponent';
+@import '../component/Skills/skills';
+@import '../component/Slider/slider';
+@import '../component/Experience/experience';
+@import '../component/ContactMe/contactMe';
+@import '../component/ContactMeItem/contactMeItem';
+@import '../component/Form/form';
+@import '../component/Portfolio/portfolio';
+@import '../component/Footer/footer';
+@import '../component/Navigation/navigation';

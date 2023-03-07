@@ -1,0 +1,86 @@
+.portfolio {
+    padding-top: 5rem;
+
+    &__container{
+        margin: 1.5rem auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__github{
+        text-align: center;
+        width: 20rem;
+
+        &--image {
+            width: 40px;
+            height: 40px;
+        }
+
+        &--link {
+            &:link,
+            &:visited {
+                display: inline-block;
+                font-size: 2rem;
+                font-weight: 300;
+                padding: .4rem 2rem;
+                color: $color-white;
+                text-decoration: none;
+                background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+                background-size: 230%; 
+                transition: all .4s;
+            }
+           &:hover,
+           &:active {
+            background-position: 100%;
+            color: $color-lightPink;
+            font-weight: bold;
+            letter-spacing: 5px;
+           }
+        }
+
+    }
+    &__projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 -15px;
+        margin-bottom: 5rem;
+    }
+
+    &__frontEnd,
+    &__backEnd {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+        justify-content: start;
+        align-items: center;
+    }
+
+    &__list {
+        display: block;
+        justify-self: start;
+
+        li {
+            list-style-image: url("../assets/img/checkmark.png");
+            font-size: 1.2rem;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+    }
+
+    &__link {
+        font-size: 2rem;
+        background-image: linear-gradient(120deg, $color-purple, $color-lightPink);
+        border-radius: 1rem;
+        width: 100%;
+        text-align: center;
+        color: $color-white;
+        text-decoration: none;
+        transition: all 0.4s;
+        &:hover {
+            color: $color-neongreen;
+            letter-spacing: 5px;
+            font-weight: bold;
+        }
+    }
+}

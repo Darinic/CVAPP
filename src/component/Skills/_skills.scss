@@ -1,0 +1,53 @@
+.skills {
+
+    &__container {
+        position: relative;
+        padding: 2rem;
+        border-radius: 5px;
+        margin: 8rem ;
+        min-height: 90vh;
+        background-image: url('../assets/img/skillsBg.jpg');
+        background-size: contain;
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
+
+        @include respond(big-tablet) {
+            margin: 1rem;
+            padding: 2rem;
+            height: auto;
+            background-size: cover;
+        }
+    }
+
+    &__ListBox {
+        position: relative;
+        margin-top: 8rem;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        align-items: space-between;
+        grid-gap: 4rem;
+
+        @include respond(small-desktop) {
+            grid-gap:2rem;
+        }
+
+        @include respond(big-tablet) {
+            margin-top: 4rem;
+        }
+
+        @include respond (mid-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            grid-gap: 2rem;
+        }
+    }
+
+    &__item {
+        max-width: 30rem;
+
+        @include respond(mid-tablet) {
+            max-width: 20rem;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box; 
+    font-size: 12px;
+
+    @include respond(small-desktop) {
+        font-size: 10px
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: $color-bg;
+    color: $color-white;
+    line-height: 1.7;
+    background-image: url(../assets/img/bg-texture.png);
+}

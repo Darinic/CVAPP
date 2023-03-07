@@ -1,0 +1,99 @@
+.experience {
+    margin: 2rem;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 57rem 57rem;
+        justify-content: space-around;
+        grid-gap: 1rem;
+        align-items: center;
+        text-align: center;
+        margin-top: 2rem;
+
+        @include respond(big-tablet) {
+            grid-template-columns: 1fr;
+            grid-gap: 5rem;
+            margin-top: 0;
+        }
+    }
+
+    &__item {
+        padding: 2rem;
+        border: none;
+        border-radius: 2rem;
+        justify-self: center;
+        background-color: rgba($color-black, 0.3);
+        box-shadow: 0 2rem 4rem rgba($color-black, 0.6);
+
+        color: $color-white;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        @include respond(big-tablet) {
+            background-color: rgba($color-black, 0.5);
+        }
+
+        &:hover {
+            background-color: rgba($color-black, 0.6);
+            transition: all 0.5s;
+        }
+    }
+
+    &__list {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 7rem;
+        row-gap: 3rem;
+
+        @include respond(big-tablet) {
+            row-gap: 1.5rem;
+        }
+
+        @include respond(small-tablet) {
+            row-gap: 1rem;
+            padding: 1rem;
+        }
+        @include respond(phone) {
+            row-gap: .3rem;
+        }
+
+        li {
+            list-style-image: url("../assets/img/iconsCourse.png");
+            font-size: 1.3rem;
+            text-align: start;
+            height: 5.5rem;
+
+            @include respond(big-tablet) {
+                font-size: 1.1rem;
+            }
+
+            @include respond(small-tablet) {
+                font-size: .9rem;
+                height: 8rem;
+            }
+
+            &::marker {
+                align-self: center;
+                justify-self: center;
+            }
+        }
+    }
+
+    &__educationBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5rem;
+        margin-top: 1rem;
+    }
+
+    &__subjects{
+        padding: 2rem;
+        li {
+            text-align: start;
+            list-style-image: url("../assets/img/bookIcon.png");
+            align-self: center;
+        }
+    }
+
+}
